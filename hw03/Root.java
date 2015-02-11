@@ -15,16 +15,22 @@ public class Root {
     
     //  construct
         myScanner=new Scanner (System.in);
-        
+    
+    //  guesses    
         System.out.print("Enter a double, and I print its cube root-");
         double x = myScanner.nextDouble();
         double guess = x/3;
-        guess = (2*guess*guess*guess+x)/(3*guess*guess);
-        guess = (2*guess*guess*guess+x)/(3*guess*guess);
-        guess = (2*guess*guess*guess+x)/(3*guess*guess);
-        guess = (2*guess*guess*guess+x)/(3*guess*guess);
-        guess = (2*guess*guess*guess+x)/(3*guess*guess);
         
+    //  improving estimate
+
+        guess = (2*guess*guess*guess+x)/(3*guess*guess);
+        guess = (2*guess*guess*guess+x)/(3*guess*guess);
+        guess = (2*guess*guess*guess+x)/(3*guess*guess);
+        guess = (2*guess*guess*guess+x)/(3*guess*guess);
+        guess = (2*guess*guess*guess+x)/(3*guess*guess);
+    
+    //  print guesses
+    
         System.out.println("The cube root is " + guess + ": " +
             guess + "*" + guess + "*"+ guess + "=" + guess*guess*guess);
         
