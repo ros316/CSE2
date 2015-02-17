@@ -22,17 +22,17 @@ public class BigMac {
     int nBigMacs = myScanner.nextInt();
     
     System.out.print("Enter the cost per Big Mac as" + "a double (in the form of xx.xx): ");
-    double BigMac$=myScanner.nextDouble();
+    double bigMac$=myScanner.nextDouble();
     System.out.print("Enter the percent tax as a whole number (xx): ");
     double taxRate=myScanner.nextDouble(); 
     taxRate/=100; //    user enters percent, but I want proportion 
     
-    double cost$;
-    int dollars,    // whole dollar amount of cost, dimes, pennies
-                    // for storing digits
-                    // to the right of the decimal point
-                    // for the cost$
-    cost$ = nBigMacs*bigMac$*(1+taxRate);
+    
+    int dollars, dimes, pennies;    // whole dollar amount of cost, dimes, pennies
+                                    // for storing digits
+                                    // to the right of the decimal point
+                                    // for the cost$
+    double cost$ = nBigMacs*bigMac$*(1+taxRate);
     //  get the whole amount, dropping decimal fraction 
     dollars=(int) cost$;
     //  get dimes amount, e.g.,
