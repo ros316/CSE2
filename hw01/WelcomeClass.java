@@ -6,7 +6,7 @@
 //  first compile the program
 //      javac WelcomeClass.java
 //  run the program
-//      java WelcomeClass//
+//      java WelcomeClass
 
 //  define a class
 public class WelcomeClass {
