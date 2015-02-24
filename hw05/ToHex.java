@@ -32,15 +32,17 @@ public class ToHex {
                     // numbers in correct range
                     else {
                         String output = "";
-                        // hexadecimal value of red computed & convert to string
+                        // hexadecimal value of red computed 
                         int hexRed1= (red/16); 
                         int hexRed2=(red%16);
                         int hexGreen1 = green/16;
                         int hexGreen2 = green%16;
                         int hexBlue1 = blue/16;
                         int hexBlue2 = blue%16;
+                        // hexadecimal same value as remainder
                         if (hexRed1 < 10) {
                             output += hexRed1;
+                        // hexadecimal value is a letter
                         } else {
                             switch (hexRed1) {
                                 case 10:
@@ -57,8 +59,10 @@ public class ToHex {
                                     output += "F"; break;
                             }
                         }
+                        // hexadecimal same value as remainder
                         if (hexRed2 < 10) {
                             output += hexRed2;
+                        // hexadecimal value is a letter
                         } else {
                             switch (hexRed2) {
                                 case 10:
@@ -75,8 +79,11 @@ public class ToHex {
                                     output += "F"; break;
                             }
                         }
+                        // hexadecimal value of green computed 
+                        // hexadecimal same value as remainder
                         if (hexGreen1 < 10) {
                             output += hexGreen1;
+                        // hexadecimal value is a letter
                         } else {
                             switch (hexGreen1) {
                                 case 10:
@@ -93,8 +100,10 @@ public class ToHex {
                                     output += "F"; break;
                             }
                         }
+                        // hexadecimal same value as remainder
                         if (hexGreen2 < 10) {
                             output += hexGreen2;
+                        // hexadecimal value is a letter
                         } else {
                             switch (hexGreen2) {
                                 case 10:
@@ -111,8 +120,11 @@ public class ToHex {
                                     output += "F"; break;
                             }
                         }
+                        // hexadecimal value of blue computed 
+                        // hexadecimal same value as remainder
                         if (hexBlue1 < 10) {
                             output += hexBlue1;
+                        // hexadecimal value is a letter
                         } else {
                             switch (hexBlue1) {
                                 case 10:
@@ -129,8 +141,10 @@ public class ToHex {
                                     output += "F"; break;
                             }
                         }
+                        // hexadecimal same value as remainder
                         if (hexBlue2 < 10) {
                             output += hexBlue2;
+                        // hexadecimal value is a letter
                         } else {
                             switch (hexBlue2) {
                                 case 10:
@@ -148,6 +162,7 @@ public class ToHex {
                             }
                         }
                         
+                        //  print the hexadecimals
                         System.out.println("The decimal numbers R:"
                                 + red +", G:" + green + ", B:" + blue
                                 + ", is represented in hexadecimal as: "
