@@ -20,7 +20,6 @@ public class RunFactorial {
         //  initialize variables
         long factorial=1; 
         System.out.println("Enter an int between 9 and 16: "); 
-        int t=0;
         
         //  make sure input is a long
         while(!myScanner.hasNextLong()) { 

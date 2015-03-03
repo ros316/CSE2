@@ -17,13 +17,13 @@ public class MakeSymbols {
         int number= (int)(Math.random()*100); 
         
         //  initalize string
+        String odd=""; 
         String even=""; 
         
         //  print random number
         System.out.println("Random number generated: "+number+""); 
         
         //  if odd
-            String odd=""; 
             //  verify odd
             if(number%2!=0){ 
                 do{ 
