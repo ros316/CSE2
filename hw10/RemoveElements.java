@@ -53,15 +53,15 @@ public class RemoveElements{    // declare class
     	return out;
     } // end method
   
-    public static int[] randomInput() {
-        int[] a = new int[10];
-        for (int i = 0; i < 10; i++) {
-            a[i] = (int)(Math.random() * 10);
+    public static int[] randomInput() { // generates 10 random ints 
+        int[] a = new int[10];  // initialize with lenght of 10
+        for (int i = 0; i < 10; i++) { //sets up loop to add one rand int to every index 
+            a[i] = (int)(Math.random() * 10);   // generator
         }
-        return a;
-    }
+        return a;   // return output to main
+    }   // end method
     
-    public static int[] delete(int[] list, int pos) {
+    public static int[] delete(int[] list, int pos) { //method that deletes the index value that the user specifies
         if (pos >= list.length) {
             System.out.println("Index out of bounds!");
             System.exit(1);
@@ -74,25 +74,24 @@ public class RemoveElements{    // declare class
                 a[i] = list[i + 1];
             }
         }
-        return a;
-    }
+        return a;   // return output array to main
+    }   // end method
     
     public static int[] remove(int[] list, int target) {
         int count = 0;
         for (int i = 0; i < list.length; i++) {
             if (list[i] == target) {
-                count++;
+                count++;    // increment
             }
         }
         int[] a = new int[list.length - count];
-        for (int i = 0, j = 0; i < list.length; i++) {
-            if (list[i] != target) {
-                a[j] = list[i];
-                j++;
+        for (int i = 0, j = 0; i < list.length; i++) { //begin loop to run through each index of input array
+            if (list[i] != target) {  //if input does not contain value sepcified
+                a[j] = list[i]; //then set index value equal to index value of output array
+                j++;     // increment
             }
         }
-        return a;
-    }
-  
+        return a;   // return output to main
+    }   // end method
   
 } // end class
