@@ -17,7 +17,7 @@ public class ArrayInputs {
         int sizeArray=myScanner.nextInt();
         int [] numbersArray=new int[sizeArray];
          
-        System.out.print("Please enter " + sizeArray + " positive integer: ");
+        System.out.print("Please enter " + sizeArray + " positive integers: ");
         for (int i=0; i<sizeArray; i++){
              numbersArray[i]=verifyValue();
         }
