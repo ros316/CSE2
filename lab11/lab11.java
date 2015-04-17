@@ -4,24 +4,26 @@
 
 import java.util.Scanner;
 
+// declare main method
 public class lab11{
-    //   add main method
+
     public static void main(String arg[])  {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan; // declare
+        scan = new Scanner(System.in); // construct
         int arraylength = 50;
         int[] array1 = new int[arraylength];
         int[] array2 = new int[arraylength];
-        for(int i = 0; i < arraylength; i++){
+        for(int i = 0; i < arraylength; i++){ // start for loop
             array1[i] = (int) (Math.random() * 101);
-        }
-        for(int i = 0; i < arraylength; i++){
-            if (i==0){
+        } // end for loop
+        for(int i = 0; i < arraylength; i++){ // start for loop
+            if (i==0){ // start if statement
                 array2[i] = (int) (Math.random() * 101);
-            }
+            } // end if statement
             else{
                 array2[i] = array2[(i-1)] + (int) (Math.random() * 101);
-            }
-        }
+            } // end else if
+        } // end for loop
         int minimum1 = array1[0];
         int maximum1 = array1[0];
         for(int i = 0; i < arraylength; i++){
@@ -89,6 +91,6 @@ public class lab11{
         else{
             System.out.println("You did not enter an int.");
             return;
-        }
-    }
-}
+        } // end else statement
+    } // end method
+} // end class
