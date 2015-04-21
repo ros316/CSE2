@@ -12,61 +12,66 @@ public class Multiply{ //define a class
         myScanner = new Scanner(System.in); // construct scanner
         
         System.out.println("You will be prompted to enter the width and height of two matrices."); //prompt user
-        System.out.print("Width 1: "); //prompt user
-        while (!myScanner.hasNextInt()){ //makes sure input is an integer
-            System.out.println("Please enter an integer.");
-            System.out.println("Width 1: ");
-            myScanner.next();
-        } // end while loop
         
-        int width1=myScanner.nextInt(); //assigns user input to a variable
-        while (width1<=0){ //checks to see if integer is greater than zero
-            System.out.println("Please enter an integer greater than zero.");
-            System.out.println("Width 1: ");
-            width1=myScanner.nextInt();
-        } // end while loop
+        System.out.print("Width 1: "); //prompt user
+        
+            while (!myScanner.hasNextInt()){ //makes sure input is an integer
+                System.out.println("Please enter an integer.");
+                System.out.println("Width 1: ");
+                myScanner.next();
+            } // end while loop
+            
+            int width1=myScanner.nextInt(); //assigns user input to a variable
+            while (width1<=0){ //checks to see if integer is greater than zero
+                System.out.println("Please enter an integer greater than zero.");
+                System.out.println("Width 1: ");
+                width1=myScanner.nextInt();
+            } // end while loop
         
         System.out.print("Height 1: ");
-        while (!myScanner.hasNextInt()){  //makes sure input is an integer
-            System.out.println("Please enter an integer.");
-            System.out.println("Height 1: ");
-            myScanner.next();
-        } // end while loop
         
-        int height1=myScanner.nextInt();
-        while (height1<=0){ //checks to see if integer is greater than zero
-            System.out.println("Please enter an integer greater than zero.");
-            System.out.println("Height 1: ");
-            height1=myScanner.nextInt();
-        } // end while loop
+            while (!myScanner.hasNextInt()){  //makes sure input is an integer
+                System.out.println("Please enter an integer.");
+                System.out.println("Height 1: ");
+                myScanner.next();
+            } // end while loop
+            
+            int height1=myScanner.nextInt();
+            while (height1<=0){ //checks to see if integer is greater than zero
+                System.out.println("Please enter an integer greater than zero.");
+                System.out.println("Height 1: ");
+                height1=myScanner.nextInt();
+            } // end while loop
         
         System.out.print("Width 2: ");
-        while (!myScanner.hasNextInt()){  //makes sure input is an integer
-            System.out.println("Please enter an integer.");
-            System.out.println("Width 2: ");
-            myScanner.next();
-        } // end while loop
         
-        int width2=myScanner.nextInt();
-        while (width2<=0){ //checks to see if integer is greater than zero
-            System.out.println("Please enter an integer greater than zero.");
-            System.out.println("Width 2: ");
-            width2=myScanner.nextInt();
-        } // end while loop
+            while (!myScanner.hasNextInt()){  //makes sure input is an integer
+                System.out.println("Please enter an integer.");
+                System.out.println("Width 2: ");
+                myScanner.next();
+            } // end while loop
+            
+            int width2=myScanner.nextInt();
+            while (width2<=0){ //checks to see if integer is greater than zero
+                System.out.println("Please enter an integer greater than zero.");
+                System.out.println("Width 2: ");
+                width2=myScanner.nextInt();
+            } // end while loop
         
         System.out.print("Height 2: ");
-        while (!myScanner.hasNextInt()){  //makes sure input is an integer
-            System.out.println("Please enter an integer.");
-            System.out.println("Height 2: ");
-            myScanner.next();
-        } // end while loop
         
-        int height2=myScanner.nextInt();
-        while (height2<=0){ //checks to see if integer is greater than zero
-            System.out.println("Please enter an integer greater than zero.");
-            System.out.println("Height 2: ");
-            height2=myScanner.nextInt();
-        } // end while loop
+            while (!myScanner.hasNextInt()){  //makes sure input is an integer
+                System.out.println("Please enter an integer.");
+                System.out.println("Height 2: ");
+                myScanner.next();
+            } // end while loop
+            
+            int height2=myScanner.nextInt();
+            while (height2<=0){ //checks to see if integer is greater than zero
+                System.out.println("Please enter an integer greater than zero.");
+                System.out.println("Height 2: ");
+                height2=myScanner.nextInt();
+            } // end while loop
         
         while (width1!=height2){ // checks to see if matrices are compatible 
             System.out.println("The matrices cannot be multiplied. Please try again.");
@@ -90,13 +95,13 @@ public class Multiply{ //define a class
 
     public static int[][] randomMatrix(int height, int width){
         Random random = new Random(); //declare random
-        int[][] array = new int[height][width]; //declare array
+        int[][] matrix = new int[height][width]; //declare array
         for (int i = 0; i < height; i++) { // start for loop
             for (int j = 0; j < width; j++) { // start innermost for loop
-                array[i][j] = random.nextInt(21) - 10; 
+                matrix[i][j] = random.nextInt(21) - 10; 
             } // end innermost for loop
         } // end for loop
-        return array; //return 
+        return matrix; //return 
     } // end random method
 
     public static void printMatrix(int [][]array){ 
@@ -113,15 +118,16 @@ public class Multiply{ //define a class
             System.out.println("The dimensions of your matrices do not match up."); //print error
             return null; //return nothing
         }
-        int [][] array=new int[a.length][b[1].length];
+        int [][] matrixAB=new int[a.length][b[1].length];
         for (int i=0; i<a.length; i++){ //iterates each row of array a
             for (int j=0; j<b[1].length; j++){ // iterates array B columns
                 for(int k=0; k<a[1].length; k++){ // iterates array A columns
-                  array[i][j]+=a[i][k]*b[k][j]; //multiplies two matrices
+                  matrixAB[i][j]+=a[i][k]*b[k][j]; //multiplies two matrices
                 } // end innermost for loop         
             } // end for loop
         } // end outermost for loop
-        return array;
+        return matrixAB;
     } // end matrix multiply method
     
 } // end class
+
